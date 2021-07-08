@@ -2,12 +2,12 @@
 pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
-// Symbol      : TDOGE
-// Name        : TxDoge
-// Total supply: 10
+// Symbol      : TAXDOGE
+// Name        : TaxDoge
+// Total supply: 1000
 // Decimals    : 2
-//
-
+// ----------------------------------------------------------------------------
+// The following contains all libraries used for ERC20 tokens
 // ----------------------------------------------------------------------------
 // Safe maths
 // ----------------------------------------------------------------------------
@@ -92,7 +92,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract TxDoge is ERC20Interface, Owned, SafeMath {
+contract TaxDoge is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -103,11 +103,11 @@ contract TxDoge is ERC20Interface, Owned, SafeMath {
 
 
     // ------------------------------------------------------------------------
-    // Constructor
+    // Constructor - replace the address here with the one of the main wallet
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "TDOGE";
-        name = "TxDoge";
+        symbol = "TAXDOGE";
+        name = "TaxDoge";
         decimals = 2;
         _totalSupply = 1000;
         balances[0x333132d4FCbe1B7F34198AD545672BbA95c5882b] = _totalSupply;
